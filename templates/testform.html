@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testform</title>
+</head>
+<body>
+   <form method="GET" action="{% url 'test' %}">
+                    {% csrf_token %}
+                <input class="form-control" type="text" name="q" value="{{request.GET.q}}" placeholder="class" style="width:500px;"><br><br>
+                    <input class="form-control" type="text" name="qss" value="{{request.GET.q}}" placeholder="year" style="width:500px;"><br><br>
+                    <br>
+                <input class="form-control" type="text" name="currentuser" value="{{user.email}}" style="width:500px;" hidden>
+                <input class="form-control" type="text" name="qs"  value="{{request.GET.q}}" placeholder="Term" style="width:500px;"><br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+</body>
+</html>

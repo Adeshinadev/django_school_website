@@ -1,0 +1,309 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Prestige College</title>
+        <link rel="stylesheet"  href="style1.css">
+     <link rel="stylesheet"  href="{% static 'css/style1.css' %}">
+<link rel="icon" type="image/png" href="{% static 'images/SCHOOL%20LOGO%20-%20Copy%20(11).png' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+
+        .spacing{
+            padding: 20px;
+        }
+
+
+        .col-centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+    </style>
+</head>
+<body>
+      <div class="wrapper">
+            <header>
+
+                  <nav>
+
+                        <div class="menu-icon">
+                              <i class="fa fa-bars fa-2x"></i>
+                        </div>
+
+                        <div class="logo">
+
+                              <img src="{% static 'images/SCHOOL%20LOGO%20-%20Copy%20(11).png' %}" alt="LOGO" height="70" width="100">
+                        </div>
+
+                        <div class="menu">
+                              <ul>
+                                   <li ><a href="#">Home</a></li>
+                                    <li><a href="{% url 'login' %}">Staff Login</a></li>
+                                    <li><a href="{% url 'login' %}">Student Login</a></li>
+<!--                                    <li><a href="{% url 'signup' %}">Contact</a></li>-->
+<!--                                  <li><a href="{% url 'Enter_result' %}">Enter Result</a></li>-->
+                                  <li><a href="{% url 'enter_admission_details' %}">Admission</a></li>
+                                  <li><a href="">Curriculum</a></li>
+                              </ul>
+                        </div>
+
+                  </nav>
+
+
+                <br><br>
+
+<center>
+    <div class="anime">
+                <div class="text_on">ADMISSION</div>
+    <div class="text_on2 container-fluid">2019/2020 Undergratuate Admission</div><br><br>
+    <div class="container-fluid" style="font-size:20px; color: white;">admission into pretige college,Engineering,College of Agriculture,College of Social and Management Sciences,College of Law,College of Computing and Communication Studies,College of Health Sciences.</div><br><br>
+    <div> <span class="apply_now">Apply Now</span></div>
+        </div>
+</center>
+            </header>
+
+          <div class="container-fluid" style="margin-left:auto; margin-left: auto;">
+            <div >
+              <div class="row" style=" grid-gap: 50px;">
+
+
+            <div class="col-sm-2" style="background-color: whitesmoke; margin-right: 50px; margin-bottom: 20px;">
+                <br>
+              <span style="color: sandybrown; padding-left: 10px; ">COLLEGE</span><br><br>
+                <span style="padding-left: 10px;" >9 awesome things you</span><br><span style="padding-left: 10px;"> need to know about us....</span><br>
+              </div>
+
+
+               <div class="col-sm-2" style="background-color: whitesmoke; border: 0px; margin-right: 50px; margin-bottom: 20px;">
+
+              <br>
+              <span style="color: sandybrown; padding-left: 10px;">CAMPUS LIFE</span><br><br>
+                   <span style="padding-left: 10px; color: black;" >student experience</span><br><span style="padding-left: 10px; color: black;"> need to know about us....</span><br>
+
+              </div>
+
+
+              <div class="col-sm-2" style="background-color: whitesmoke; margin-right: 50px; margin-bottom: 20px;">
+              <br>
+
+              <span style="color: sandybrown; padding-left: 10px;">ACADEMICS</span><br><br>
+                  <span style="padding-left: 10px; color: black;" >prestige graduate school of</span><br><span style="padding-left: 10px;color: black; color: black;"> Arts,Science and commercial</span><br>
+
+
+              </div>
+              <div class="col-sm-2" style="background-color: whitesmoke; margin-right: 50px; margin-bottom: 20px;">
+
+
+              <br>
+
+              <span style="color: sandybrown; padding-left: 10px;">ADMISSION</span><br><br>
+                  <span style="padding-left: 10px; color: black;" >2019/2020</span><br><span style="padding-left: 10px; color: black;">undergraduate admission</span><br>
+
+
+
+              </div>
+
+
+          </div>
+                 </div>
+          </div>
+
+<!-- latest news-->
+
+
+          <section class="news" style=" margin-bottom: 100px;">
+		<div class="container">
+			<h2>Latest news</h2>
+			{% for latest_new in latest_newss %}
+			<article>
+				<div class="pic"><img src="{{latest_new.content_image.url}}" alt=""></div>
+				<div class="info">
+					<h4>{{latest_new.headline}}</h4>
+					<p class="date">{{latest_new.date}}</p>
+					<p>{{latest_new.new_content}}</p>
+					<a class="more" href="#">Read more</a>
+				</div>
+			</article>
+{% endfor %}
+			<div class="btn-holder">
+				<a class="btn" href="#">See archival news</a>
+			</div>
+		</div>
+		<!-- / container -->
+	</section><br><br>
+
+         <section class="events" style="margin: -110px; background-image: url({% static 'images/events.jpg' %}); background-repeat: no-repeat; background-size:auto; color:white;">
+		<div class="container">
+			<h2>Upcoming events</h2>
+			{% for all_content in all_contents%}
+			<article>
+				<div class="current-date">
+					<p>{{all_content.month}}</p>
+					<p class="date">{{all_content.date}}</p>
+				</div>
+				<div class="info">
+					<p>{{all_content.main_content}}</p><a class="more" href="#" style="color: #64C8AD">Read more <img src="{% static 'images/right-arrow.svg' %}" width="15px" height="15px"></a>
+				</div>
+			</article>
+		{% endfor %}
+			<div class="btn-holder">
+				<a class="btn blue" href="#">See all upcoming events</a><br><br><br><br>
+			</div>
+		</div>
+		<!-- / container -->
+	</section>
+
+
+
+
+
+
+
+
+          <br><br><br><br><br>
+
+
+
+
+          <center>
+
+          <h1 style="font-size: 50px; text-align: center; margin-top: 30px;color: black;">Philosophy of Prestige College</h1>
+
+                  <p style="font-size: 20px;color: black;  padding-left: 20px;padding-right: 20px;">
+
+                 The College is a centre of learning and reasearch of distintion,combining academic excellence with love for humanity,borne out of a God-fearing attitude in accordance with the Biblical Tradition of ethical behaviour,social responsibility and democratic ethos.
+
+              </center>
+              </div><center>
+<!--              <img src="images/prof.jpg" height="900px" width="1000px;">-->
+    </center>
+
+
+
+
+
+
+
+
+
+    <footer id="footer">
+		<div class="container">
+			<section>
+				<article class="col-1">
+					<h3>Contact</h3>
+					<ul>
+						<li class="address"><a href="#">151 W Adams St<br>Detroit, MI 48226</a></li>
+						<li class="mail"><a href="#">contact@harrisonuniversity.com</a></li>
+						<li class="phone last"><a href="#">(971) 536 845 924</a></li>
+					</ul>
+				</article>
+				<article class="col-2">
+					<h3>Forum topics</h3>
+					<ul>
+						<li><a href="#">Omnis iste natus error sit</a></li>
+						<li><a href="#">Nam libero tempore cum soluta</a></li>
+						<li><a href="#">Totam rem aperiam eaque </a></li>
+						<li><a href="#">Ipsa quae ab illo inventore veritatis </a></li>
+						<li class="last"><a href="#">Architecto beatae vitae dicta sunt </a></li>
+					</ul>
+				</article>
+				<article class="col-3">
+					<h3>Social media</h3>
+					<p>Temporibus autem quibusdam et aut debitis aut rerum necessitatibus saepe.</p>
+					<ul>
+						<li class="facebook"><a href="#">Facebook</a></li>
+						<li class="google-plus"><a href="#">Google+</a></li>
+						<li class="twitter"><a href="#">Twitter</a></li>
+						<li class="pinterest"><a href="#">Pinterest</a></li>
+					</ul>
+				</article>
+				<article class="col-4">
+					<h3>Newsletter</h3>
+					<p>Assumenda est omnis dolor repellendus temporibus autem quibusdam.</p>
+					<form action="#">
+						<input placeholder="Email address..." type="text">
+						<button type="submit">Subscribe</button>
+					</form>
+					<ul>
+						<li><a href="#"></a></li>
+					</ul>
+				</article>
+			</section>
+			<p class="copy">Copyright 2014 Harrison High School. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">Vandelay Design</a>. All rights reserved.</p>
+		</div>
+		<!-- / container -->
+	</footer>
+	<!-- / footer -->
+
+	<div id="fancy">
+		<h2>Request information</h2>
+		<form action="#">
+			<div class="left">
+				<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
+				<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
+				<fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>
+			</div>
+			<div class="right">
+				<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
+			</div>
+			<div class="btn-holder">
+				<button class="btn blue" type="submit">Send request</button>
+			</div>
+		</form>
+	</div>
+
+      <script type="text/javascript">
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+
+           $(".anime").slideDown(8000);
+
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+                  $('a').addClass('colorscroll');
+
+            }
+
+            else {
+                  $('nav').removeClass('black');
+                  $('a').removeClass('colorscroll');
+
+            };
+
+
+
+
+
+
+
+
+      });
+
+
+
+      </script>
+
+</body>
+</html>

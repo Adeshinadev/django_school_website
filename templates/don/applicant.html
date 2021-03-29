@@ -1,0 +1,47 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>i am an applicant</h1>-->
+<!--<h3>{{user.email}}</h3>-->
+<!--{% if Admission.status.admission_status %}-->
+<!--<h2>YOU HAVE BEEN ADMITTED</h2>-->
+<!--{% else %}-->
+<!--<h3>you have not been admitted</h3>-->
+<!--{% endif %}-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="enter_admission_details" method="post">
+    {% csrf_token %}
+    <input type="text" name="firstname" placeholder="first_name">
+    <input type="text" name="othername" placeholder="othername">
+    <input type="text" name="fullname" placeholder="fullname">
+    <input type="text" name="surname" placeholder="surname">
+    <input type="text" name="Date_of_Birth" placeholder="date of birth">
+    <input type="text" name="gender" placeholder="gender">
+    <input type="text" name="local_government_area" placeholder="local">
+    <input type="text" name="state_of_origin" placeholder="state">
+    <input type="text" name="Religion" placeholder="religion">
+    <input type="text" name="Present_school" placeholder="present school">
+    <input type="text" name="class_for_admission" placeholder="class">
+
+    <input type="text" name="reason_for_leaving_current_or_last_school" placeholder="reason_for_leaving_current_or_last_school">
+    <input type="text" name="Testimonial_exam_results_from_last_school" placeholder="Testimonial_exam_results_from_last_school">
+    <input type="text" name="health_conditions" placeholder="health_conditions">
+    <input type="submit">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% if messages %}
+{% for message in messages %}
+<div>
+
+    <strong>
+
+        {{message}}
+
+    </strong>
+
+</div>
+
+
+{% endfor %}
+
+
+{% else %}
+
+<form method="post" action="Enter_result" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Upload file</label>
+    <input type="file" name="file" >
+    <input type="submit">
+</form>
+{% endif %}

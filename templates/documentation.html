@@ -1,0 +1,364 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Documentation</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Unicat project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/blog_single.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/blog_single_responsive.css' %}">
+    <style>
+
+
+        li{
+            padding-bottom: 20px;
+            font-size: 16px;
+        }
+
+
+    </style>
+</head>
+<body style="padding-left: 20px;">
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+		<div class="top_bar">
+			<div class="top_bar_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+								<ul class="top_bar_contact_list">
+									<li><div class="question">Have any questions?</div></li>
+									<li>
+										<i class="fa fa-phone" aria-hidden="true"></i>
+										<div>2347089357002</div>
+									</li>
+									<li>
+										<i class="fa fa-envelope-o" aria-hidden="true"></i>
+										<div>adeshinex4u@gmail.com</div>
+									</li>
+								</ul>
+								<div class="top_bar_login ml-auto">
+									<div class="login_button"><a href="#">Register or Login</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Content -->
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container">
+								<a href="#">
+									<div class="logo_text">Prestige<span>College</span></div>
+								</a>
+							</div>
+							<nav class="main_nav_contaner ml-auto">
+								<ul class="main_nav">
+									<li class="active"><a href="/">Home</a></li>
+									<li><a href="{% url 'login' %}">Student Login</a></li>
+									<li><a href="{% url 'login' %}">Staff Login</a></li>
+									<li><a href="{% url 'enter_admission_details' %}">Admission</a></li>
+									<li><a href="{% url 'documentation' %}">Documentation</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+								<div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
+
+								<!-- Hamburger -->
+
+
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Search Panel -->
+		<div class="header_search_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+							<form action="#" class="header_search_form">
+								<input type="search" class="search_input" placeholder="Search" required="required">
+								<button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<div class="search">
+			<form action="#" class="header_search_form menu_mm">
+				<input type="search" class="search_input menu_mm" placeholder="Search" required="required">
+				<button class="header_search_button d-flex flex-column align-items-center justify-content-center menu_mm">
+					<i class="fa fa-search menu_mm" aria-hidden="true"></i>
+				</button>
+			</form>
+		</div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="active"><a href="/">Home</a></li>
+									<li><a href="{% url 'login' %}">Student Login</a></li>
+									<li><a href="{% url 'login' %}">Staff Login</a></li>
+									<li><a href="{% url 'enter_admission_details' %}">Admission</a></li>
+									<li><a href="{% url 'documentation' %}">Documentation</a></li>
+									<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- Home -->
+
+
+	<!-- Blog -->
+
+	<div class="blog">
+		<div class="container">
+			<div class="row">
+
+				<!-- Blog Content -->
+
+					<div class="blog_content">
+
+						<div class="blog_meta">
+
+						</div>
+
+
+
+						<div class="blog_subtitle">How to use Prestige School Management System.</div>
+						<p style="font-size:17px;">
+
+
+                        Welcome, this is the official documentation of how to use Prestige College school management system works. Please read this documentation meticulously as it’ll aid you navigate around the website easily, and give you a quick overview of how the components works together. (This system was built by the Lead Python-Django Developer; Aina Adeshina Daniel. At CoderHolic.)
+
+
+                        </p>
+
+
+
+						<div class="blog_subtitle">Features of the Website</div>
+                        <br><br>
+
+
+                        <ul style="list-style-type: disc;">
+
+                            <li>This site Displays Dynamic information to its visitor i.e. it displays updated information as directed by the manager, this implies that the manager can insert, update and delete information on the website. Examples of the information the site displays include; Latest news, upcoming events. Etc. </li>
+                            <li>	The website is programmed to give room for enquiries, i.e. users could log their complains and request by filling a Request Information Form, and this form will be submit to the admin’s/manager’s Dashboard for reply.</li>
+                            <li>	Student/Staff could also pay fees online.by the use of a reliable Payment Gateway (paystack) student, staff or any other users could pay any sort of fee on this website by just supplying their bank details. User could also print their receipt on the website.</li>
+                            <li>	 Staff/teacher can upload student results on this website, hence student can view and print their results on the website.</li>
+                            <li>	Student and staffs, can upload and view their Biodata. </li>
+                            <li>Lastly the website generates ID card for the registered students and staff.</li>
+
+
+
+
+                        </ul>
+
+                        <p>
+
+<div class="blog_subtitle">Below are necessary credentials to login to different Dashboards.
+<p>
+
+
+
+</p>
+
+							</p>
+
+                        <div>
+<p style="font-size:16px;">
+Student's Dashboard---------- Email: student@gmail.com.<br>
+Teacher's Dashboard---------- Email: teacher@gmail.com.<br>
+Accountant's Dashboard------- Email: accountant@gmail.com.<br>
+
+</p>
+<p style="color:red; font-size:23px;;">Note the password for all the user is <span style="color:green;"> int</span></p><br><br>
+
+<div class="blog_subtitle"><i> Watch the video below to see how to use this site.</i></div><br>
+<div class="container">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe width="894" height="503" src="https://www.youtube.com/embed/mstYJHZBEOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+						</div>
+
+						<div class="blog_images">
+
+						</div>
+
+					</div>
+
+					<!-- Comments -->
+
+
+				<!-- Blog Sidebar -->
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="newsletter_background" style="background-image:url(images/newsletter_background.jpg)"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_background" style="background-image:url(images/footer_background.png)"></div>
+		<div class="container">
+			<div class="row footer_row">
+				<div class="col">
+					<div class="footer_content">
+						<div class="row">
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer About -->
+								<div class="footer_section footer_about">
+									<div class="footer_logo_container">
+										<a href="#">
+											<div class="footer_logo_text">Prestige<span>College</span></div>
+										</a>
+									</div>
+									<div class="footer_about_text">
+										<p>Lorem ipsum dolor sit ametium, consectetur adipiscing elit.</p>
+									</div>
+									<div class="footer_social">
+										<ul>
+											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer Contact -->
+								<div class="footer_section footer_contact">
+									<div class="footer_title">Contact Us</div>
+									<div class="footer_contact_info">
+										<ul>
+											<li>Email: Adeshinex@gmail.com</li>
+											<li>Phone:  +2347089357002</li>
+											<li></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_links">
+									<div class="footer_title">Contact Us</div>
+									<div class="footer_links_container">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="about.html">About</a></li>
+											<li><a href="contact.html">Contact</a></li>
+											<li><a href="#">Features</a></li>
+											<li><a href="courses.html">Courses</a></li>
+											<li><a href="#">Events</a></li>
+											<li><a href="#">Gallery</a></li>
+											<li><a href="#">FAQs</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-3 footer_col clearfix">
+
+								<!-- Footer links -->
+								<div class="footer_section footer_mobile">
+									<div class="footer_title">Mobile</div>
+									<div class="footer_mobile_content">
+										<div class="footer_image"><a href="#"><img src="{% static 'images/mobile_1.png' %}" alt=""></a></div>
+										<div class="footer_image"><a href="#"><img src="{% static 'images/mobile_2.png' %}" alt=""></a></div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copyright_row">
+				<div class="col">
+					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"></a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+						<div class="ml-lg-auto cr_links">
+							<ul class="cr_list">
+								<li><a href="#">Copyright notification</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'plugins/colorbox/jquery.colorbox-min.js' %}"></script>
+<script src="{% static 'js/blog_single.js' %}"></script>
+</body>
+</html>

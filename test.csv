@@ -1,0 +1,4 @@
+users,class_of_student,year,term,subject_name,first_test,second_test,exam_score,score,grade
+student@gmail.com,jss3a,2010,first term,English language,10,10,10,30,F9
+student@gmail.com,jss3a,2010,first term,Mathematics,10,10,40,60,B
+student@gmail.com,jss3a,2010,first term,Business Studies,20,10,43,73,A
